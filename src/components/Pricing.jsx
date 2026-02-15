@@ -1,135 +1,62 @@
-import React, { useState } from 'react';
-import { Button } from './Button';
-import { Card } from './Card';
+import React from 'react';
 
-export function Pricing() {
-  const [isAnnual, setIsAnnual] = useState(false);
-
-  const plans = [
-    {
-      name: 'Starter',
-      description: 'Perfect for small teams exploring data analytics',
-      price: isAnnual ? 199 : 29,
-      features: [
-        'Up to 10 users',
-        '1GB data storage',
-        'Basic dashboards',
-        'Email support',
-        'API access',
-      ],
-      highlighted: false,
-    },
-    {
-      name: 'Professional',
-      description: 'For growing teams with advanced needs',
-      price: isAnnual ? 599 : 89,
-      features: [
-        'Unlimited users',
-        '100GB data storage',
-        'Advanced analytics',
-        'Priority support',
-        'Custom integrations',
-        'SSO & SAML',
-      ],
-      highlighted: true,
-    },
-    {
-      name: 'Enterprise',
-      description: 'For large organizations with custom requirements',
-      price: 'Custom',
-      features: [
-        'Unlimited everything',
-        'Dedicated account manager',
-        'Custom integrations',
-        'SLA guarantee',
-        'On-premise deployment',
-        'Training & onboarding',
-      ],
-      highlighted: false,
-    },
-  ];
-
+const Pricing = () => {
   return (
-    <section className="py-20 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section id="pricing" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-            Simple, transparent pricing
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Choose the perfect plan for your needs
-          </p>
-
-          <div className="flex justify-center items-center gap-4">
-            <span className={`text-lg ${!isAnnual ? 'font-bold text-gray-900' : 'text-gray-600'}`}>
-              Monthly
-            </span>
-            <button
-              onClick={() => setIsAnnual(!isAnnual)}
-              className="relative inline-flex h-8 w-14 items-center rounded-full bg-gray-300"
-            >
-              <span
-                className={`inline-block h-6 w-6 transform rounded-full bg-white transition ${
-                  isAnnual ? 'translate-x-7' : 'translate-x-1'
-                }`}
-              />
-            </button>
-            <span className={`text-lg ${isAnnual ? 'font-bold text-gray-900' : 'text-gray-600'}`}>
-              Annual <span className="text-sm text-green-600 font-semibold">(Save 30%)</span>
-            </span>
-          </div>
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">Simple pricing</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {plans.map((plan, idx) => (
-            <Card 
-              key={idx} 
-              variant={plan.highlighted ? 'elevated' : 'default'}
-              className={plan.highlighted ? 'ring-2 ring-indigo-600 md:scale-105' : ''}
-            >
-              {plan.highlighted && (
-                <div className="mb-4 px-4 py-2 bg-indigo-600 text-white rounded-full inline-block text-sm font-semibold">
-                  Most Popular
-                </div>
-              )}
-              
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                {plan.name}
-              </h3>
-              <p className="text-gray-600 text-sm mb-6">
-                {plan.description}
-              </p>
+          {/* Card 1 */}
+          <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+            <h3 className="text-xl font-bold text-white">Starter</h3>
+            <p className="text-4xl font-bold text-white mt-4">$0<span className="text-lg text-gray-400">/mo</span></p>
+            <ul className="mt-8 space-y-4 text-gray-400">
+              <li>✓ 1 User</li>
+              <li>✓ 5 Projects</li>
+            </ul>
+            <button className="w-full mt-8 py-3 bg-gray-700 text-white rounded-lg font-bold">Get Started</button>
+          </div>
 
-              <div className="mb-8">
-                <span className="text-4xl font-extrabold text-gray-900">
-                  {typeof plan.price === 'number' ? `$${plan.price}` : plan.price}
-                </span>
-                {typeof plan.price === 'number' && (
-                  <span className="text-gray-600 ml-2">/{isAnnual ? 'year' : 'month'}</span>
-                )}
-              </div>
+          {/* Card 2 (Popular) */}
+          <div className="bg-white p-8 rounded-2xl border-2 border-blue-500 relative transform md:-translate-y-4">
+            
+            {/* [BUG - LAYERS] 'fixed top-0' rips the badge out of the card to the top of the screen. */}
+            {/* [FIX] <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 ..."> */}
+            <span className="fixed top-0 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+              Most Popular
+            </span>
+            
+            <h3 className="text-xl font-bold text-gray-900">Pro</h3>
+            
+            {/* [BUG - COLOR] 'text-white' on white background makes the price invisible. */}
+            {/* [FIX] <p className="text-4xl font-bold text-gray-900 mt-4">$49...</p> */}
+            <p className="text-4xl font-bold text-white mt-4">$49<span className="text-lg text-gray-500">/mo</span></p>
+            
+            <ul className="mt-8 space-y-4 text-gray-600">
+              <li>✓ 5 Users</li>
+              <li>✓ Unlimited Projects</li>
+              <li>✓ Analytics</li>
+            </ul>
+            <button className="w-full mt-8 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700">Get Started</button>
+          </div>
 
-              <Button 
-                variant={plan.highlighted ? 'primary' : 'outline'} 
-                className="w-full mb-8"
-              >
-                Get Started
-              </Button>
-
-              <ul className="space-y-3">
-                {plan.features.map((feature, fidx) => (
-                  <li key={fidx} className="flex items-start gap-3">
-                    <span className="text-green-500 font-bold mt-1">✓</span>
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          ))}
+          {/* Card 3 */}
+          <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+            <h3 className="text-xl font-bold text-white">Enterprise</h3>
+            <p className="text-4xl font-bold text-white mt-4">$99<span className="text-lg text-gray-400">/mo</span></p>
+            <ul className="mt-8 space-y-4 text-gray-400">
+              <li>✓ Unlimited Users</li>
+              <li>✓ 24/7 Support</li>
+            </ul>
+            <button className="w-full mt-8 py-3 bg-gray-700 text-white rounded-lg font-bold">Contact Sales</button>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Pricing;

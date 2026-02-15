@@ -1,76 +1,42 @@
 import React from 'react';
-import { Card } from './Card';
 
-export function Features() {
-  const features = [
-    {
-      icon: '⚡',
-      title: 'Real-time Sync',
-      description: 'Data updates propagate instantly across all your devices and dashboards.',
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: '🔒',
-      title: 'Bank-grade Security',
-      description: '256-bit encryption and SOC 2 compliance keeps your sensitive data safe.',
-      color: 'from-green-500 to-emerald-500',
-    },
-    {
-      icon: '🤝',
-      title: 'Collaborative',
-      description: 'Work together with your team in the same dashboard with real-time comments.',
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
-      icon: '📊',
-      title: 'Advanced Analytics',
-      description: 'Powerful visualizations and custom reports for deeper insights.',
-      color: 'from-orange-500 to-red-500',
-    },
-    {
-      icon: '🔧',
-      title: 'Easy Integration',
-      description: 'Connect to 500+ tools and data sources with a single click.',
-      color: 'from-indigo-500 to-blue-500',
-    },
-    {
-      icon: '⚙️',
-      title: 'Automation',
-      description: 'Automate workflows and get alerts when your data meets specific conditions.',
-      color: 'from-teal-500 to-green-500',
-    },
-  ];
+const features = [
+  { title: "Analytics", desc: "Real-time data processing for instant insights." },
+  { title: "Security", desc: "Enterprise-grade encryption and compliance." },
+  { title: "Integration", desc: "Seamlessly connects with your existing tools." },
+  { title: "Scalability", desc: "Built to handle millions of requests per second." },
+  { title: "Support", desc: "24/7 dedicated support team for your needs." },
+  { title: "Automation", desc: "Automate repetitive tasks with ease." },
+];
 
+const Features = () => {
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="features" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-            Everything you need to succeed
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Powerful features designed to help you extract maximum value from your data.
-          </p>
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Everything you need</h2>
+          <p className="mt-4 text-lg text-gray-500">Comprehensive tools for modern teams.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, idx) => (
-            <Card key={idx} variant="default">
-              <div className={`w-14 h-14 bg-gradient-to-br ${feature.color} text-white text-3xl flex items-center justify-center rounded-xl mb-4 shadow-lg`}>
-                {feature.icon}
+        {/* [BUG - LAYOUT] 'md:grid-cols-1' keeps it a single column even on large screens. */}
+        {/* [BUG - SPACING] 'gap-0' removes separation between cards. */}
+        {/* [FIX] <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
+          {features.map((feature, index) => (
+            <div key={index} className="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-100 hover:bg-blue-50/50 transition-all">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-6">
+                ★
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+              <p className="text-gray-500 leading-relaxed">
+                {feature.desc}
               </p>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Features;
