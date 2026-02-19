@@ -18,9 +18,6 @@ const Features = () => {
           <p className="mt-4 text-lg text-gray-500">Comprehensive tools for modern teams.</p>
         </div>
 
-        {/* [BUG - LAYOUT] 'md:grid-cols-1' keeps it a single column even on large screens. */}
-        {/* [BUG - SPACING] 'gap-0' removes separation between cards. */}
-        {/* [FIX] <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
         <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
           {features.map((feature, index) => (
             <div key={index} className="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-100 hover:bg-blue-50/50 transition-all">

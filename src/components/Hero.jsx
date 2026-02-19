@@ -2,8 +2,6 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    // [BUG - SPACING] 'pt-0' causes the fixed header to cover the top of the hero section.
-    // [FIX] <section className="pt-32 pb-12 md:pt-40 md:pb-20 bg-gradient-to-b from-blue-50 to-white">
     <section className="pt-0 pb-12 md:pt-40 md:pb-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
@@ -11,8 +9,6 @@ const Hero = () => {
           <span>🚀 New features released</span>
         </div>
 
-        {/* [BUG - TYPO] 'text-6x' is invalid. Title will not be large. */}
-        {/* [FIX] <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6"> */}
         <h1 className="text-5xl md:text-6x font-extrabold text-gray-900 tracking-tight mb-6">
           Transform your business <br />
           <span className="text-blue-600">with data-driven insights</span>

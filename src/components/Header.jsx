@@ -4,8 +4,6 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    // [BUG - LAYERS] '-z-50' places the header behind the page content.
-    // [FIX] <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
     <header className="fixed w-full bg-white/90 backdrop-blur-sm -z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -14,8 +12,6 @@ const Header = () => {
           </div>
 
           <nav className="hidden md:flex space-x-8">
-            {/* [BUG - COLOR] 'text-white' on white background makes links invisible. */}
-            {/* [FIX] <a href="#features" className="text-gray-600 hover:text-blue-600 font-medium">Features</a> */}
             <a href="#features" className="text-white hover:text-blue-600 font-medium">Features</a>
             <a href="#pricing" className="text-white hover:text-blue-600 font-medium">Pricing</a>
             <a href="#about" className="text-white hover:text-blue-600 font-medium">About</a>

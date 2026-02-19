@@ -22,17 +22,11 @@ const Pricing = () => {
 
           {/* Card 2 (Popular) */}
           <div className="bg-white p-8 rounded-2xl border-2 border-blue-500 relative transform md:-translate-y-4">
-            
-            {/* [BUG - LAYERS] 'fixed top-0' rips the badge out of the card to the top of the screen. */}
-            {/* [FIX] <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 ..."> */}
             <span className="fixed top-0 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
               Most Popular
             </span>
             
             <h3 className="text-xl font-bold text-gray-900">Pro</h3>
-            
-            {/* [BUG - COLOR] 'text-white' on white background makes the price invisible. */}
-            {/* [FIX] <p className="text-4xl font-bold text-gray-900 mt-4">$49...</p> */}
             <p className="text-4xl font-bold text-white mt-4">$49<span className="text-lg text-gray-500">/mo</span></p>
             
             <ul className="mt-8 space-y-4 text-gray-600">
