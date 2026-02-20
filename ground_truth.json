@@ -1,0 +1,155 @@
+{
+  "repository": "Corporate Landing Page",
+  "bugs": [
+    {
+      "bug_category": "Typo",
+      "bug_type": "min-height",
+      "file_modified": "src/App.jsx",
+      "line_number": 10,
+      "clean_code": "<div className=\"font-sans text-gray-900 antialiased bg-white\">",
+      "buggy_code": "<div className=\"min-h-scren bg-white font-sans text-gray-900 flex flex-col-reverse\">",
+      "css_selector": ".App-root",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Layout",
+      "bug_type": "flex-direction",
+      "file_modified": "src/App.jsx",
+      "line_number": 10,
+      "clean_code": "<div className=\"font-sans text-gray-900 antialiased bg-white\">",
+      "buggy_code": "<div className=\"min-h-scren bg-white font-sans text-gray-900 flex flex-col-reverse\">",
+      "css_selector": ".flex-container",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Layers",
+      "bug_type": "z-index",
+      "file_modified": "src/components/Header.jsx",
+      "line_number": 7,
+      "clean_code": "<nav className=\"flex items-center justify-between flex-wrap bg-white p-6 shadow-sm sticky top-0 z-50 backdrop-blur-md bg-white/80\">",
+      "buggy_code": "<header className=\"fixed w-full bg-white/90 backdrop-blur-sm -z-50 border-b border-gray-100\">",
+      "css_selector": ".nav-container",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Color",
+      "bug_type": "text-color",
+      "file_modified": "src/components/Header.jsx",
+      "line_number": 15,
+      "clean_code": "<a key={link} href=\"#\" className=\"block py-2 md:py-0 px-3 md:px-0 rounded-md text-gray-600 hover:text-indigo-600 font-medium transition-colors\">",
+      "buggy_code": "<a href=\"#features\" className=\"text-white hover:text-blue-600 font-medium\">Features</a>",
+      "css_selector": ".nav-link",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Typo",
+      "bug_type": "font-size",
+      "file_modified": "src/components/Hero.jsx",
+      "line_number": 12,
+      "clean_code": "<h1 className=\"text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight mb-6\">",
+      "buggy_code": "<h1 className=\"text-5xl md:text-6x font-extrabold text-gray-900 tracking-tight mb-6\">",
+      "css_selector": ".hero-heading",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Layout",
+      "bug_type": "grid-columns",
+      "file_modified": "src/components/Features.jsx",
+      "line_number": 21,
+      "clean_code": "<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">",
+      "buggy_code": "<div className=\"grid grid-cols-1 md:grid-cols-1 gap-0\">",
+      "css_selector": ".features-grid",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Spacing",
+      "bug_type": "gap",
+      "file_modified": "src/components/Features.jsx",
+      "line_number": 21,
+      "clean_code": "<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">",
+      "buggy_code": "<div className=\"grid grid-cols-1 md:grid-cols-1 gap-0\">",
+      "css_selector": ".grid-gap",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Layers",
+      "bug_type": "position",
+      "file_modified": "src/components/Pricing.jsx",
+      "line_number": 25,
+      "clean_code": "<div className=\"mb-4 px-4 py-2 bg-indigo-600 text-white rounded-full inline-block text-sm font-semibold\">",
+      "buggy_code": "<span className=\"fixed top-0 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg\">",
+      "css_selector": ".badge-popular",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Color",
+      "bug_type": "text-color",
+      "file_modified": "src/components/Pricing.jsx",
+      "line_number": 30,
+      "clean_code": "<span className=\"text-4xl font-extrabold text-gray-900\">",
+      "buggy_code": "<p className=\"text-4xl font-bold text-white mt-4\">$49<span className=\"text-lg text-gray-500\">/mo</span></p>",
+      "css_selector": ".price-text",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Spacing",
+      "bug_type": "margin-bottom",
+      "file_modified": "src/components/Features.jsx",
+      "line_number": 17,
+      "clean_code": "<h2 className=\"text-4xl md:text-5xl font-extrabold text-gray-900 mb-4\">",
+      "buggy_code": "<h2 className=\"text-3xl font-bold text-gray-900 sm:text-4xl\">Everything you need</h2>",
+      "css_selector": ".features-heading",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ]
+}
