@@ -2,6 +2,7 @@
   "repository": "Corporate Landing Page",
   "bugs": [
     {
+      "comment": "Bug #1 - min-height typo",
       "bug_category": "Typo",
       "bug_type": "min-height",
       "file_modified": "src/App.jsx",
@@ -12,11 +13,12 @@
       "bounding_box": {
         "x": 0,
         "y": 0,
-        "width": 0,
-        "height": 0
+        "width": 1280,
+        "height": 720
       }
     },
     {
+      "comment": "Bug #2 - flex-direction reverse",
       "bug_category": "Layout",
       "bug_type": "flex-direction",
       "file_modified": "src/App.jsx",
@@ -27,11 +29,12 @@
       "bounding_box": {
         "x": 0,
         "y": 0,
-        "width": 0,
-        "height": 0
+        "width": 1280,
+        "height": 720
       }
     },
     {
+      "comment": "Bug #3 - z-index negative",
       "bug_category": "Layers",
       "bug_type": "z-index",
       "file_modified": "src/components/Header.jsx",
@@ -41,12 +44,13 @@
       "css_selector": ".nav-container",
       "bounding_box": {
         "x": 0,
-        "y": 0,
-        "width": 0,
+        "y": 720,
+        "width": 1280,
         "height": 0
       }
     },
     {
+      "comment": "Bug #4 - nav link text color",
       "bug_category": "Color",
       "bug_type": "text-color",
       "file_modified": "src/components/Header.jsx",
@@ -55,13 +59,14 @@
       "buggy_code": "<a href=\"#features\" className=\"text-white hover:text-blue-600 font-medium\">Features</a>",
       "css_selector": ".nav-link",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
+        "x": 484,
+        "y": 720,
+        "width": 61,
         "height": 0
       }
     },
     {
+      "comment": "Bug #5 - font-size typo 6x",
       "bug_category": "Typo",
       "bug_type": "font-size",
       "file_modified": "src/components/Hero.jsx",
@@ -70,13 +75,14 @@
       "buggy_code": "<h1 className=\"text-5xl md:text-6x font-extrabold text-gray-900 tracking-tight mb-6\">",
       "css_selector": ".hero-heading",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 32,
+        "y": 127,
+        "width": 1216,
+        "height": 96
       }
     },
     {
+      "comment": "Bug #6 - grid columns single column",
       "bug_category": "Layout",
       "bug_type": "grid-columns",
       "file_modified": "src/components/Features.jsx",
@@ -85,13 +91,14 @@
       "buggy_code": "<div className=\"grid grid-cols-1 md:grid-cols-1 gap-0\">",
       "css_selector": ".features-grid",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 32,
+        "y": 713,
+        "width": 1216,
+        "height": 7
       }
     },
     {
+      "comment": "Bug #7 - grid gap zero",
       "bug_category": "Spacing",
       "bug_type": "gap",
       "file_modified": "src/components/Features.jsx",
@@ -100,13 +107,14 @@
       "buggy_code": "<div className=\"grid grid-cols-1 md:grid-cols-1 gap-0\">",
       "css_selector": ".grid-gap",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 32,
+        "y": 713,
+        "width": 1216,
+        "height": 7
       }
     },
     {
+      "comment": "Bug #8 - badge position fixed",
       "bug_category": "Layers",
       "bug_type": "position",
       "file_modified": "src/components/Pricing.jsx",
@@ -115,13 +123,14 @@
       "buggy_code": "<span className=\"fixed top-0 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg\">",
       "css_selector": ".badge-popular",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
+        "x": 584,
+        "y": 720,
+        "width": 112,
         "height": 0
       }
     },
     {
+      "comment": "Bug #9 - price text white color",
       "bug_category": "Color",
       "bug_type": "text-color",
       "file_modified": "src/components/Pricing.jsx",
@@ -130,13 +139,14 @@
       "buggy_code": "<p className=\"text-4xl font-bold text-white mt-4\">$49<span className=\"text-lg text-gray-500\">/mo</span></p>",
       "css_selector": ".price-text",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
+        "x": 65,
+        "y": 720,
         "width": 0,
         "height": 0
       }
     },
     {
+      "comment": "Bug #10 - features heading spacing",
       "bug_category": "Spacing",
       "bug_type": "margin-bottom",
       "file_modified": "src/components/Features.jsx",
@@ -145,10 +155,10 @@
       "buggy_code": "<h2 className=\"text-3xl font-bold text-gray-900 sm:text-4xl\">Everything you need</h2>",
       "css_selector": ".features-heading",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 32,
+        "y": 565,
+        "width": 1216,
+        "height": 40
       }
     }
   ]
